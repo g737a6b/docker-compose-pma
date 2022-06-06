@@ -9,13 +9,11 @@ services:
       MYSQL_USER: db_user
       MYSQL_PASSWORD: password
       TZ: Asia/Tokyo
-    ports:
-      - "3306:3306"
     volumes:
       - "./db-data:/var/lib/mysql"
   pma:
     container_name: app-210408-pma
-    image: "phpmyadmin/phpmyadmin:5.0"
+    image: "phpmyadmin/phpmyadmin:5.1"
     environment:
       PMA_HOST: db
       PMA_USER: root
